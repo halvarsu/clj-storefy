@@ -12,6 +12,12 @@ If web_page.html is not from the current week, delete it. Then run the standalon
 
     $ java -jar storefy-0.1.0-standalone.jar [args]
 
+To run from clojure files, run 
+
+    $ lein run
+
+PS: Times are defined in UTC+2.
+
 
 ## Options
 
