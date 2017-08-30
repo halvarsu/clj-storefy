@@ -1,0 +1,64 @@
+(ns storefy.visualize
+  (:gen-class)
+  (:require [quil.core :as q]
+            [quil.middleware :as m]
+            [clj-time.core :as t]
+            [storefy.utils :as utils]))
+
+
+
+(defn setup []
+  (q/frame-rate 15)
+  (q/color-mode :hsb)
+  {:i 0 })
+
+(defn update-state [state]
+  (update state :i inc))
+
+(defn status-text [lecture]
+  (let [min-left (t/in-minutes (utils/time-left @lecture))
+        course (get-in @lecture [:lecture :course])]
+    (if (:active? @lecture)
+      (str course " in progress, " min-left " minutes left")
+      (str min-left " minutes left until " course)))
+  )
+
+(defn draw-state [state]
+  (let [i (:i state) 
+        t 3
+        x 20; (+ (/ (q/width) 2) (* 100 (q/cos t))) 
+        y (mod i (+ (q/height) 40)  ); (+ (/ (q/height) 2) (* 100 (q/sin t)))
+        ] 
+    (q/background 100 100 50)
+    (q/text-font (q/create-font "Waree" 53))
+    (comment q/fill 200 100 50)
+    (q/text (status-text lecture) x y)))
+  
+
+(def lecture 
+  (atom (-> (utils/current-storefy)
+      (utils/get-dom )
+      (utils/parse-page)
+      (#(utils/to-joda-time % 2017 35))
+      (utils/flatten-tables)
+      (utils/restructure-table)
+      (utils/next-or-current))))
+
+(q/defsketch test
+    :host "test"
+    :size [1280 1000]
+    :draw draw-state
+    :update update-state
+    :setup setup
+    :keep-on-top true
+    :middleware [m/pause-on-error
+                 m/fun-mode])
+
+(defn visualize [lecture]
+  (q/sketch 
+    :host "test"
+    :size [600 400]
+    :draw (partial draw-state lecture)
+    :update update-state
+    :setup setup
+    :middleware [m/fun-mode]))

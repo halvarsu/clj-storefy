@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <title>TP Timeplaner for rom</title> 
+
+        <style type="text/css" >
+            .tp-table {  display: table; 
+                         width: 720px;}
+            .tp-row  {    display: table-row; }
+            .tp-cell {  display: table-cell; 
+                        vertical-align: middle;
+                        padding: 2px;}
+            .day {
+                font-weight: bold;
+                margin-top: 4px;
+                border-bottom: 1px #ccc solid;
+                width: 720px;}
+            .gray {font-weight: bold; color: #666666;}
+
+            hr {page-break-after: always;
+                border: none;
+                margin-top: 7px;}
+            .tid {text-align: left;vertical-align: top; width: 120px;}
+            .course{text-align: left;vertical-align: top; width: 250px;}
+            .desc {text-align: left;vertical-align: top;width: 350px }
+            .logo{margin-top: 20px;}
+        </style>	
+        <script src="../js/ajax.js"></script>
+        <script src="js/romutskrift.js"></script>
+    </head> 
+
+    <body>
+
+<div class="logo"><img class="mylogo" src="../rescources/1-2-logo-universitetet-i-oslo.png" border="0" /></div><h3>Fysikkbygningen, Store fysiske auditorium (BL24V343)</h3>
+<div>Uke 35 2017 (28.08.2017 - 03.09.2017)</div>
+<div class="day">mandag</div><div class="tp-table"><div class="tp-row">
+<div class="tp-cell tid gray">Tid</div>
+<div class="tp-cell desc gray">Aktivitet</div>
+<div class="tp-cell course gray">Emne/kontaktperson</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">10:15 - 12:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">FYS2160</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">12:15 - 14:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">FYS1120</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">14:15 - 16:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">AST1010</div>
+</div>
+</div>
+<div class="day">tirsdag</div><div class="tp-table"><div class="tp-row">
+<div class="tp-cell tid gray">Tid</div>
+<div class="tp-cell desc gray">Aktivitet</div>
+<div class="tp-cell course gray">Emne/kontaktperson</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">10:15 - 12:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">AST2000</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">12:15 - 14:00</div>
+<div class="tp-cell desc">Vektorkalkulus</div>
+<div class="tp-cell course">FYS1120</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">14:15 - 16:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">FYS3220</div>
+</div>
+</div>
+<div class="day">onsdag</div><div class="tp-table"><div class="tp-row">
+<div class="tp-cell tid gray">Tid</div>
+<div class="tp-cell desc gray">Aktivitet</div>
+<div class="tp-cell course gray">Emne/kontaktperson</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">10:15 - 12:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">FYS2160</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">12:15 - 14:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">FYS1120</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">14:15 - 16:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">AST1010</div>
+</div>
+</div>
+<div class="day">torsdag</div><div class="tp-table"><div class="tp-row">
+<div class="tp-cell tid gray">Tid</div>
+<div class="tp-cell desc gray">Aktivitet</div>
+<div class="tp-cell course gray">Emne/kontaktperson</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">08:15 - 10:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">FYS3150</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">12:15 - 14:00</div>
+<div class="tp-cell desc">Lectures</div>
+<div class="tp-cell course">ECON4310</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">14:15 - 16:00</div>
+<div class="tp-cell desc">Mulig Felleskollokvie - Kontakt Hilde for å høre om rommet er ledig</div>
+<div class="tp-cell course">E. Murtnes</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">16:00 - 19:00</div>
+<div class="tp-cell desc">masterkreering</div>
+<div class="tp-cell course">H. Lynnebakken</div>
+</div>
+</div>
+<div class="day">fredag</div><div class="tp-table"><div class="tp-row">
+<div class="tp-cell tid gray">Tid</div>
+<div class="tp-cell desc gray">Aktivitet</div>
+<div class="tp-cell course gray">Emne/kontaktperson</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">08:15 - 10:00</div>
+<div class="tp-cell desc">Forelesninger</div>
+<div class="tp-cell course">FYS3150</div>
+</div>
+<div class="tp-row">
+<div class="tp-cell tid">10:15 - 12:00</div>
+<div class="tp-cell desc">Forelesninger: Alt. lokale forelesning MAT-INF1100</div>
+<div class="tp-cell course">MAT-INF1100</div>
+</div>
+</div>
+<br><div></div>
+<br><div>Skrevet ut: 30.08.2017</div>
+<hr>    </body></html>
+
