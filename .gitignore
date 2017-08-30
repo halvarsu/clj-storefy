@@ -3,8 +3,8 @@
 /checkouts
 pom.xml
 pom.xml.asc
-*.jar
 *.class
+*.jar
 /.lein-*
 /.nrepl-port
 .hgignore

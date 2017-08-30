@@ -8,13 +8,17 @@ Clone repository
 
 ## Usage
 
-If web_page.html is not from the current week, delete it. Then run the standalone jar-file
+If web_page.html is not from the current week, delete it. 
 
-    $ java -jar storefy-0.1.0-standalone.jar [args]
 
 To run from clojure files, run 
 
     $ lein run
+
+To create and run a standalone jar file, do
+
+    $ lein uberjar
+    $ java -jar target/uberjar/storefy-0.1.0-standalone.jar [args]
 
 PS: Times are defined in UTC+2.
 
