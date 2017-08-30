@@ -1,16 +1,17 @@
 # storefy
 
-FIXME: description
+A small clojure app for showing the next lecture in store fysiske lesesal.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Clone repository
 
 ## Usage
 
-FIXME: explanation
+If web_page.html is not from the current week, delete it. Then run the standalone jar-file
 
     $ java -jar storefy-0.1.0-standalone.jar [args]
+
 
 ## Options
 
