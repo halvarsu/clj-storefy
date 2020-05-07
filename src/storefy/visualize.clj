@@ -3,7 +3,8 @@
   (:require [quil.core :as q]
             [quil.middleware :as m]
             [clj-time.core :as t]
-            [storefy.utils :as utils]))
+            [storefy.utils :as utils]
+            [clojure.java.shell :only [sh]]))
 
 (declare visualize)
 
@@ -64,6 +65,9 @@
     :middleware [m/pause-on-error m/fun-mode]))
 
 
+(defn text-visualize [lectures]
+  ())
+
 (comment 
 (def lectures
   (-> (utils/current-storefy)
@@ -72,6 +76,7 @@
       (utils/to-joda-time (utils/get-year) (utils/get-week))
       (utils/flatten-tables)
       (utils/restructure-table)))
+
 (def test-state 
   {:i 0
    :lectures lectures
